@@ -2,15 +2,15 @@
 : good-weather
 	2nd-char choosechar
 	blurbslot 0= if
-		"It actually turned out to be a nice day today!" blurbsay
+		"Finallement, c'était une belle journee aujourd'hui!" blurbsay
 	else
 		blurbslot 2 < if
 			cattitude- if
-				($ "PFFT, WHAT'S SO NICE ABOUT IT?" $) blurbsay
-				"Ain't nothin' nice about zombies!" blurbsay
+				($ "PFFT, QU'EST-CE QUI EST BIEN?" $) blurbsay
+				"Y'a rien de bien avec les zombies!" blurbsay
 				STAT_MORALE 1st-char .stat--
 		else
-			"You're right! What a nice day for a road trip." blurbsay
+			"T'as raison! Quelle belle journee pour un road trip." blurbsay
 			STAT_MORALE me .stat++
 			STAT_MORALE 1st-char .stat++
 		then then
@@ -20,7 +20,7 @@
 : taste-like
 	2nd-char choosechar
 	blurbslot 0= if 
-		"If you close your eyes this cat food almost tastes like tuna!" blurbsay
+		"Si vous fermez les yeux, cette nourriture pour chat a presque le gout du thon!" blurbsay
 	else
 		blurbslot 2 < if
 			cattitude+ not if
